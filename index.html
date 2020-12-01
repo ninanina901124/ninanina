@@ -1,0 +1,69 @@
+<html>
+<head>
+<style>
+ body{
+   height:100%;
+   width:100%;
+ }
+ .screen{
+   background-color:yellow;
+   border:solid black 1px;
+   width:93%;
+   height:25%;
+ }
+ .special{
+   background-color:#FFB6C1;
+   border:solid black 1px;
+   width:23%;
+   height:25%;
+ }
+ .normal{
+   background-color:00FFFF;
+   border:solid black 1px;
+   width:23%;
+   height:15%;
+ }
+</style>
+<script>
+  function xxx(e){
+    scr.value=scr.value+e.value;
+  }
+  function clr(e){
+    scr.value=""
+  }
+function lclick(e){
+  scr.value=scr.value/e.value;
+}
+ function clr(e){
+   scr.value=""
+ }
+ function calc(){
+   scr.value=eval(scr.value)
+ }
+</script>
+</head>
+<body>
+ <input class="screen" type="textarea" id="scr"><br/>
+ <input class="special" type="button" value="(" onclick="xxx(this)">
+ <input  class="special" type="button" value=")" onclick="xxx(this)"> 
+ <input  class="special" type="button" value="%" onclick="xxx(this)"> 
+ <input  class="special" type="button" value="C" onclick="clr(this)"> <br/>
+ <input  class="normal"  type="button" value="7" onclick="xxx(this)"> 
+ <input  class="normal" type="button" value="8" onclick="xxx(this)"> 
+ <input  class="normal"  type="button" value="9" onclick="xxx(this)"> 
+ <input  class="special" type="button" value="/" onclick="xxx(this)"> <br/>
+  <input  class="normal" type="button" value="4" onclick="xxx(this)" > 
+ <input  class="normal"  type="button" value="5" onclick="xxx(this)"> 
+ <input  class="normal"  type="button" value="6" onclick="xxx(this)"> 
+ <input  class="special" type="button" value="*" onclick="xxx(this)"> <br/>
+ <input  class="normal" type="button" value="1" onclick="xxx(this)">
+ <input  class="normal" type="button" value="2" onclick="xxx(this)" > 
+ <input  class="normal" type="button" value="3" onclick="xxx(this)"> 
+ <input  class="special" type="button" value="-" onclick="xxx(this)"> <br/>
+ <input  type="button"  value="0" > 
+  <input  class="special" type="button" value="." onclick="xxx(this)"> 
+   <input class="special" type="button" value="=" onclick="calc()"> 
+ <input  class="special" type="button" value="+" onclick="xxx(this)">    
+  
+</body>
+</html>
